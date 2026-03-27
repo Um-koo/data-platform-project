@@ -86,7 +86,8 @@ ORDER BY avg_pm10 DESC;
 
 집계된 mart 테이블을 활용하여
 평균 PM10 기준 상위 지역을 조회할 수 있도록 구성하였다.
-```SELECT *
+```
+SELECT *
 FROM mart.mart_airkorea_region_summary
 ORDER BY avg_pm10 DESC
 LIMIT 3;
