@@ -66,8 +66,8 @@ python scripts/run_pipeline.py
 
 지역별 평균 PM10, PM2.5 값을 집계하여
 어느 지역의 대기질 수준이 상대적으로 높은지 비교할 수 있도록 하였다.
-'''
-SELECT
+
+'''SELECT
     sido_name,
     AVG(pm10_value) AS avg_pm10,
     AVG(pm25_value) AS avg_pm25,
