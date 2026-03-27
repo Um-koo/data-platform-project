@@ -5,8 +5,8 @@ import json
 # 🔥 여기 추가
 s3 = boto3.client(
     's3',
-    aws_access_key_id='AKIA23A62ZK6YMUVY7PP',
-    aws_secret_access_key='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'
+    aws_access_key_id='KEY입력',
+    aws_secret_access_key='KEY입력'
 )
 
 bucket = "data-platform-raw-umkoo"
