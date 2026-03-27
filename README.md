@@ -67,7 +67,8 @@ python scripts/run_pipeline.py
 지역별 평균 PM10, PM2.5 값을 집계하여
 어느 지역의 대기질 수준이 상대적으로 높은지 비교할 수 있도록 하였다.
 
-'''SELECT
+```
+SELECT
     sido_name,
     AVG(pm10_value) AS avg_pm10,
     AVG(pm25_value) AS avg_pm25,
@@ -75,7 +76,7 @@ python scripts/run_pipeline.py
 FROM staging.staging_airkorea
 GROUP BY sido_name
 ORDER BY avg_pm10 DESC;
-'''
+```
 - 활용 목적: 지역별 대기질 비교
 - 기대 효과: 오염도가 높은 지역을 빠르게 식별 가능
 
