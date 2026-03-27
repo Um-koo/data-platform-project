@@ -1,4 +1,3 @@
-====== 신규
 # Data Platform Project
 
 AirKorea 데이터를 기반으로  
@@ -51,12 +50,12 @@ AirKorea API
 ## 5. 프로젝트 구조
 
 data-platform-project  
-├── scripts/  
-├── sql/  
-├── data/  
-├── .gitignore  
-├── README.md  
-└── LICENSE  
+    ├── scripts/  
+    ├── sql/  
+    ├── data/  
+    ├── .gitignore  
+    ├── README.md  
+    └── LICENSE  
 
 ---
 
