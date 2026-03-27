@@ -48,7 +48,7 @@ AirKorea API
 ---
 
 ## 5. 프로젝트 구조
-
+```
 data-platform-project  
     ├── scripts/  
     ├── sql/  
@@ -56,7 +56,7 @@ data-platform-project
     ├── .gitignore  
     ├── README.md  
     └── LICENSE  
-
+```
 ---
 
 ## 6. 데이터 처리 흐름
