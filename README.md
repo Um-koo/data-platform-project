@@ -86,12 +86,11 @@ ORDER BY avg_pm10 DESC;
 
 집계된 mart 테이블을 활용하여
 평균 PM10 기준 상위 지역을 조회할 수 있도록 구성하였다.
-'''
-SELECT *
+```SELECT *
 FROM mart.mart_airkorea_region_summary
 ORDER BY avg_pm10 DESC
 LIMIT 3;
-'''
+```
 - 활용 목적: 오염도가 높은 상위 지역 추출
 - 기대 효과: 대시보드 및 리포트용 요약 지표 제공
 
@@ -101,12 +100,12 @@ LIMIT 3;
 
 PM10 수치가 일정 기준을 초과하는 데이터를 조회하여
 고농도 구간을 탐지할 수 있도록 하였다.
-'''
+```
 SELECT *
 FROM staging.staging_airkorea
 WHERE pm10_value > 80
 ORDER BY pm10_value DESC;
-'''
+```
 - 활용 목적: 고농도 미세먼지 이상값 탐지
 - 기대 효과: 단순 임계값 기반 모니터링 가능
 ---
