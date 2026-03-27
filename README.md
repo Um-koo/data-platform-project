@@ -144,57 +144,62 @@ python scripts/run_pipeline.py
 ## 9. 데이터 검증 및 분석
 
 ### 9.1 실행 로그 확인
-
+```
 SELECT *
 FROM mart.pipeline_log
 ORDER BY id DESC;
-
+```
 ---
 
 ### 9.2 적재 데이터 확인
-
+```
 SELECT *
 FROM staging.staging_airkorea
 ORDER BY data_time DESC;
-
+```
 ---
 
 ### 9.3 집계 결과 확인
-
+```
 SELECT *
 FROM mart.mart_airkorea_region_summary
 ORDER BY avg_pm10 DESC;
-
+```
 ---
 
 ### 9.4 데이터 품질 검증
 
 -- NULL 체크
+```
 SELECT *
 FROM staging.staging_airkorea
 WHERE pm10_value IS NULL;
-
+```
 -- 이상값 체크
+```
 SELECT *
 FROM staging.staging_airkorea
 WHERE pm10_value > 80;
-
+```
 ---
 
 ### 9.5 분석 예시
 
 -- 지역별 평균
+```
 SELECT
     sido_name,
     AVG(pm10_value)
 FROM staging.staging_airkorea
 GROUP BY sido_name;
-
+```
 -- TOP 오염 지역
+```
 SELECT *
 FROM mart.mart_airkorea_region_summary
 ORDER BY avg_pm10 DESC
 LIMIT 3;
+```
 ---
 
 ## 10. 운영 안정성 (Stabilize)
